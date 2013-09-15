@@ -40,6 +40,8 @@ class Lecture1Chunker extends DocumentAnnotator {
         ) {
             f += s"STRING@$dif=${tt.string}"
             f += s"POS@$dif=${tt.posLabel.categoryValue}"
+            f += s"NE@$dif=${tt.nerLabel.categoryValue}"
+            f += s"SENTENCE_POS@$dif=${tt.positionInSentence}"
         }
         f
     }
