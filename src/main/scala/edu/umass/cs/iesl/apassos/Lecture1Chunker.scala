@@ -91,6 +91,6 @@ object Lecture1Chunker {
         println(testDoc.owplString(Seq(model.tokenAnnotationString)))
         
         println(model.tokenAnnotationString)
-        println(model.model.score)
+        //println(model.model.score())
     }
 }
