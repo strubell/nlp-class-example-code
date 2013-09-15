@@ -76,7 +76,8 @@ class Lecture1Chunker extends DocumentAnnotator {
         val testFeatures = testSentences.flatMap(s => {
             s.tokens.map(extractFeatures)
         }).toSeq
-        val trainer = new OnlineLinearMultiClassTrainer()
+        //val trainer = new OnlineLinearMultiClassTrainer()
+        val trainer = new SVMMultiClassTrainer()
         model = trainer.train(trainLabels, trainFeatures, testLabels, testFeatures)
     }
 
