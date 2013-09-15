@@ -89,12 +89,6 @@ object Lecture1Chunker {
         val model = new Lecture1Chunker
         model.train(trainDoc.sentences, testDoc.sentences)
         val doc = model.process(testDoc)
-        println(testDoc.owplString(Seq(model.tokenAnnotationString)))
-        
-        val actualAnnotations = testDoc.tokens.map(_.attr[ChunkLabel].categoryValue)
-        val assignedAnnotations = doc.tokens.map(_.attr[ChunkLabel].categoryValue)
-        //println(actualAnnotations)
-        //println(assignedAnnotations)
-        println(actualAnnotations.zip(assignedAnnotations).count({case (x,y) => x != y})/actualAnnotations.size)
+        //println(testDoc.owplString(Seq(model.tokenAnnotationString)))
     }
 }
