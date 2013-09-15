@@ -65,6 +65,13 @@
         <artifactId>maven-scala-plugin</artifactId>
         <configuration>
           <launchers>
+            <launcher>
+              <id>Lecture1Demo</id>
+              <mainClass>edu.umass.cs.iesl.apassos.Lecture1Demo</mainClass>
+              <jvmArgs>
+                <jvmArg>-Xmx4g</jvmArg>
+              </jvmArgs>
+            </launcher>
 	  </launchers>
           <jvmArgs>
             <jvmArg>-Xms128m</jvmArg>
