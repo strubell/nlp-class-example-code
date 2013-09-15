@@ -92,7 +92,7 @@ object Lecture1Chunker {
         println(testDoc.owplString(Seq(model.tokenAnnotationString)))
         
         val actualAnnotations = testDoc.tokens.map(_.attr[ChunkLabel].categoryValue)
-        val assignedAnnotations = doc.tokens.map(tokenAnnotationString)
+        val assignedAnnotations = doc.tokens.map(Lecture1Chunker.tokenAnnotationString)
         println(actualAnnotations)
         println(assignedAnnotations)
     }
