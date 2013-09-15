@@ -72,6 +72,14 @@
                 <jvmArg>-Xmx4g</jvmArg>
               </jvmArgs>
             </launcher>
+            
+            <launcher>
+              <id>Lecture1Chunker</id>
+              <mainClass>edu.umass.cs.iesl.apassos.Lecture1Chunker</mainClass>
+              <jvmArgs>
+                <jvmArg>-Xmx4g</jvmArg>
+              </jvmArgs>
+            </launcher>
 	  </launchers>
           <jvmArgs>
             <jvmArg>-Xms128m</jvmArg>
