@@ -87,10 +87,12 @@ object Lecture1Chunker {
         val trainDoc = LoadOntonotes5.fromFilename("/iesl/canvas/mccallum/data/ontonotes-en-1.1.0/trn-pmd/nw-wsj-trn.dep.pmd").head
         val testDoc = LoadOntonotes5.fromFilename("/iesl/canvas/mccallum/data/ontonotes-en-1.1.0/dev-pmd/nw-wsj-24.dep.pmd").head
         val model = new Lecture1Chunker
-        model.train(trainDoc.sentences, testDoc.sentences)
+        val doc = model.train(trainDoc.sentences, testDoc.sentences)
         println(testDoc.owplString(Seq(model.tokenAnnotationString)))
         
-        println(model.tokenAnnotationString)
-        //println(model.model.score())
+        val actualAnnotations = testDoc.tokens.map(_.attr[ChunkLabel].categoryValue)
+        val assignedAnnotations = doc.tokens.map(tokenAnnotationString)
+        println(actualAnnotations)
+        println(assignedAnnotations)
     }
 }
