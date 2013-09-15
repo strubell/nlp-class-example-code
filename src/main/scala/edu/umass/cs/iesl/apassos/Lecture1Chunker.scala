@@ -95,6 +95,6 @@ object Lecture1Chunker {
         val assignedAnnotations = doc.tokens.map(_.attr[ChunkLabel].categoryValue)
         //println(actualAnnotations)
         //println(assignedAnnotations)
-        println(actualAnnotations.zip(assignedAnnotations).count({case (x,y) => x != y}))
+        println(actualAnnotations.zip(assignedAnnotations).count({case (x,y) => x != y})/actualAnnotations.size)
     }
 }
