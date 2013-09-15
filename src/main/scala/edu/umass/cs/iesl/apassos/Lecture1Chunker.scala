@@ -3,7 +3,7 @@ package edu.umass.cs.iesl.apassos
 import cc.factorie.app.nlp._
 import cc.factorie.app.nlp.pos.PTBPosLabel
 import cc.factorie.{ FeatureVectorVariable, CategoricalTensorDomain, LabeledCategoricalVariable, CategoricalDomain }
-import cc.factorie.optimize.{ LinearMultiClassClassifier, OnlineLinearMultiClassTrainer }
+import cc.factorie.optimize.{ LinearMultiClassClassifier, OnlineLinearMultiClassTrainer, SVMMultiClassTrainer}
 import scala.annotation.tailrec
 
 /**
